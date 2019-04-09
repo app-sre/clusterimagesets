@@ -18,7 +18,6 @@ def create_cluster_image_set(name, hive_image, release_image):
         "kind": "ClusterImageSet",
         "metadata": {
             "name": cluster_image_set_name,
-            "namespace": "",
             "labels": {
                 "hive.openshift.io/source": "nightly"
             }
