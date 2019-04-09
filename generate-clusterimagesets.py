@@ -74,9 +74,8 @@ if __name__ == "__main__":
     release_info_raw = check_output(
         ['oc', 'get', 'is/release', '-n', 'ocp', '-o', 'json'])
 
-    hive_image = get_latest_hive_image()
-
     release_info = json.loads(release_info_raw.decode('utf-8'))
+    hive_image = get_latest_hive_image()
 
     cluster_image_sets = generate_cluster_image_sets(release_info, hive_image)
 
